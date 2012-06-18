@@ -1,0 +1,33 @@
+cmake_minimum_required(VERSION 2.8)
+project(random_numbers)
+
+find_package(catkin REQUIRED)
+catkin_stack()
+
+catkin_project(${PROJECT_NAME}
+  LIBRARIES ${PROJECT_NAME}
+  INCLUDE_DIRS include
+  )
+
+find_package(Boost REQUIRED date_time thread)
+include_directories(${Boost_INCLUDE_DIR})
+
+include_directories(include)
+
+add_library(${PROJECT_NAME}
+  src/random_numbers.cpp)
+
+target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARIES})
+
+install(TARGETS ${PROJECT_NAME}
+        ARCHIVE DESTINATION lib
+        LIBRARY DESTINATION lib)
+
+install(DIRECTORY include/
+        DESTINATION include
+        FILES_MATCHING PATTERN "*.h")
+
+# for compatibility with old build system
+install(FILES manifest.xml
+        DESTINATION share/${PROJECT_NAME})
+
