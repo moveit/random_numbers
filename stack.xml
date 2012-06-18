@@ -1,6 +1,6 @@
 <stack>
   <name>random_numbers</name>
-  <version>0.1.0</version>
+  <version>0.1.1</version>
   <description brief="Random number generator using boost">This package generates random floating point values, integers, quaternions using boost libraries.</description>
   <author email="isucan@willowgarage.edu">Ioan Sucan</author>
   <maintainer email="isucan@willowgarage.com">Ioan Sucan</maintainer>
