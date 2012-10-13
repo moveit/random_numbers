@@ -27,6 +27,6 @@ install(DIRECTORY include/
         FILES_MATCHING PATTERN "*.h")
 
 # for compatibility with old build system
-install(FILES manifest.xml
+install(FILES package.xml
         DESTINATION share/${PROJECT_NAME})
 
