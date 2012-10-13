@@ -1,16 +1,14 @@
 <package>
-  <description brief="random_numbers">
-
-     random_numbers
-
-  </description>
-  <author>Ioan Sucan</author>
+  <name>random_numbers</name>
+  <version>0.1.2</version>
+  <description>This package generates random floating point values, integers, quaternions using boost libraries.</description>
+  <author email="isucan@willowgarage.edu">Ioan Sucan</author>
+  <maintainer email="isucan@willowgarage.com">Ioan Sucan</maintainer>
   <license>BSD</license>
-  <review status="unreviewed" notes=""/>
-  <url>http://ros.org/wiki/random_numbers</url>
+  <url type="website">http://ros.org/wiki/random_numbers</url>
 
-  <export>
-    <cpp cflags="`pkg-config --cflags random_numbers`" lflags="`pkg-config --libs random_numbers`"/>
-  </export>
+  <build_depend>boost</build_depend>
+  <build_depend>catkin</build_depend>
 
+  <run_depend>boost</run_depend>
 </package>
