@@ -57,6 +57,9 @@ public:
   
   /** \brief Constructor. Always sets a "random" random seed */
   RandomNumberGenerator(void);
+
+  /** \brief Constructor. Allow a seed to be specified for deterministic behaviour */
+  RandomNumberGenerator(boost::uint32_t seed);
   
   /** \brief Generate a random real between 0 and 1 */
   double uniform01(void)

@@ -74,6 +74,15 @@ random_numbers::RandomNumberGenerator::RandomNumberGenerator(void) : generator_(
 {
 }
 
+random_numbers::RandomNumberGenerator::RandomNumberGenerator(boost::uint32_t seed)
+                                                                   : generator_(seed),
+                                                                     uniDist_(0, 1),
+                                                                     normalDist_(0, 1),
+                                                                     uni_(generator_, uniDist_),
+                                                                     normal_(generator_, normalDist_)
+{
+}
+
 // From: "Uniform Random Rotations", Ken Shoemake, Graphics Gems III,
 //       pg. 124-132
 void random_numbers::RandomNumberGenerator::quaternion(double value[4])
