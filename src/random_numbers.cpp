@@ -43,7 +43,7 @@
 #include <boost/math/constants/constants.hpp>
 #include <boost/scoped_ptr.hpp>
 
-boost::uint32_t first_seed_;
+static boost::uint32_t first_seed_;
 
 /// Compute the first seed to be used; this function should be called only once
 static boost::uint32_t firstSeed(void)
@@ -85,6 +85,8 @@ random_numbers::RandomNumberGenerator::RandomNumberGenerator(boost::uint32_t see
                                                                      uni_(generator_, uniDist_),
                                                                      normal_(generator_, normalDist_)
 {
+  // Because we manually specified a seed, we need to save it ourselves
+  first_seed_ = seed;
 }
 
 // From: "Uniform Random Rotations", Ken Shoemake, Graphics Gems III,
