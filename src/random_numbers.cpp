@@ -43,7 +43,7 @@
 #include <boost/math/constants/constants.hpp>
 #include <boost/scoped_ptr.hpp>
 
-static boost::uint32_t first_seed_;
+static boost::uint32_t first_seed_ = 0;
 
 /// Compute the first seed to be used; this function should be called only once
 static boost::uint32_t firstSeed(void)
