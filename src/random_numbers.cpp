@@ -43,13 +43,16 @@
 #include <boost/math/constants/constants.hpp>
 #include <boost/scoped_ptr.hpp>
 
+static boost::uint32_t first_seed_ = 0;
+
 /// Compute the first seed to be used; this function should be called only once
 static boost::uint32_t firstSeed(void)
 {
   boost::scoped_ptr<int> mem(new int());
-  return (boost::uint32_t)((boost::posix_time::microsec_clock::universal_time() -
+  first_seed_ = (boost::uint32_t)((boost::posix_time::microsec_clock::universal_time() -
                             boost::posix_time::ptime(boost::date_time::min_date_time)).total_microseconds() +
                            (unsigned long long)(mem.get()));
+  return first_seed_;
 }
 
 /// We use a different random number generator for the seeds of the
@@ -66,6 +69,7 @@ static boost::uint32_t nextSeed(void)
   return v;
 }
 
+
 random_numbers::RandomNumberGenerator::RandomNumberGenerator(void) : generator_(nextSeed()),
                                                                      uniDist_(0, 1),  
                                                                      normalDist_(0, 1),
@@ -81,6 +85,8 @@ random_numbers::RandomNumberGenerator::RandomNumberGenerator(boost::uint32_t see
                                                                      uni_(generator_, uniDist_),
                                                                      normal_(generator_, normalDist_)
 {
+  // Because we manually specified a seed, we need to save it ourselves
+  first_seed_ = seed;
 }
 
 // From: "Uniform Random Rotations", Ken Shoemake, Graphics Gems III,
@@ -96,4 +102,9 @@ void random_numbers::RandomNumberGenerator::quaternion(double value[4])
   value[1] = c1 * r1;
   value[2] = s2 * r2;
   value[3] = c2 * r2;
+}
+
+boost::uint32_t random_numbers::RandomNumberGenerator::getFirstSeed()
+{
+  return first_seed_;
 }
