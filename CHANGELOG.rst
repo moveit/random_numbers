@@ -2,8 +2,8 @@
 Changelog for package random_numbers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.3.0 (2014-09-05)
+------------------
 * Update README.md with Documentation
 * Allow the randomly generated seed to be saved so that experiments / benc...
 * Initialize static int to 0
