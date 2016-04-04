@@ -2,8 +2,8 @@
 Changelog for package random_numbers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.3.1 (2016-04-04)
+------------------
 * Merge pull request `#10 <https://github.com/ros-planning/random_numbers/issues/10>`_ from jspricke/cmake_lib
   Use catkin variables for install dirs
 * Contributors: Dave Coleman, Jochen Sprickerhof
