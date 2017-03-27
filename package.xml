@@ -3,12 +3,12 @@
   <version>0.3.1</version>
   <description>
   This  library contains wrappers for generating floating point values, integers, quaternions using boost libraries.
-    
+
   The constructor of the wrapper is guaranteed to be thread safe and initialize its random number generator to a random seed.
   Seeds are obtained using a separate and different random number generator.
   </description>
   <author email="isucan@willowgarage.edu">Ioan Sucan</author>
-  <maintainer email="isucan@willowgarage.com">Ioan Sucan</maintainer>
+  <maintainer email="stevenragnarok@osrfoundation.org">Steven! Ragnarök</maintainer>
   <license>BSD</license>
   <url type="website">http://ros.org/wiki/random_numbers</url>
 
