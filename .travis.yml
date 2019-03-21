@@ -3,6 +3,8 @@
 # Author: Dave Coleman, Jonathan Bohren
 sudo: required
 dist: trusty
+services:
+  - docker
 language:
   - cpp
   - python
@@ -19,7 +21,9 @@ notifications:
 
 env:
   matrix:
-    - ROS_DISTRO=crystal TEST=clang-format
+    - ROS_DISTRO=kinetic TEST=clang-format
+    - ROS_DISTRO=kinetic ROS_REPO=ros
+    - ROS_DISTRO=melodic ROS_REPO=ros
 
 before_script:
   - git clone -q https://github.com/ros-planning/moveit_ci.git .moveit_ci
