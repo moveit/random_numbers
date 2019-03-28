@@ -19,7 +19,7 @@ notifications:
 
 env:
   matrix:
-    - ROS_DISTRO=crystal TEST="ament_lint clang-format"
+    - ROS_DISTRO=crystal TEST=clang-format
     - ROS_DISTRO=crystal ROS_REPO=ros
 
 before_script:
