@@ -8,8 +8,6 @@ services:
 language:
   - cpp
   - python
-python:
-  - "2.7"
 compiler:
   - gcc
 notifications:
@@ -21,12 +19,11 @@ notifications:
 
 env:
   matrix:
-    - ROS_DISTRO=kinetic TEST="catkin_lint clang-format"
-    - ROS_DISTRO=kinetic ROS_REPO=ros
-    - ROS_DISTRO=melodic ROS_REPO=ros
+    - ROS_DISTRO=crystal TEST=clang-format
+    - ROS_DISTRO=crystal ROS_REPO=ros
 
 before_script:
-  - git clone -q https://github.com/ros-planning/moveit_ci.git .moveit_ci
+  - git clone --branch ros2 -q https://github.com/ros-planning/moveit_ci.git .moveit_ci
 
 script:
   - source .moveit_ci/travis.sh
