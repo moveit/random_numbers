@@ -14,7 +14,7 @@ include_directories(
   ${Boost_INCLUDE_DIR}
 )
 
-add_library(${PROJECT_NAME}
+add_library(${PROJECT_NAME} SHARED
   src/random_numbers.cpp
 )
 
