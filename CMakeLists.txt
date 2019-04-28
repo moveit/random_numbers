@@ -11,7 +11,7 @@ find_package(Boost REQUIRED date_time system thread)
 include_directories(include
       ${Boost_INCLUDE_DIR})
 
-add_library(${PROJECT_NAME}
+add_library(${PROJECT_NAME} SHARED
   src/random_numbers.cpp
 )
 
