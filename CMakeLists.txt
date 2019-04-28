@@ -1,10 +1,7 @@
 cmake_minimum_required(VERSION 3.5)
 project(random_numbers)
 
-# Default to C++14
-if(NOT CMAKE_CXX_STANDARD)
-  set(CMAKE_CXX_STANDARD 14)
-endif()
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -fPIC")
 
 find_package(ament_cmake REQUIRED)
 find_package(Boost REQUIRED date_time system thread)
