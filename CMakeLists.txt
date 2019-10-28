@@ -9,19 +9,15 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(Boost REQUIRED date_time system thread)
 
-include_directories(
-  include
-  ${Boost_INCLUDE_DIR}
-)
+include_directories(include)
 
 add_library(${PROJECT_NAME} SHARED
   src/random_numbers.cpp
 )
 
-target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARIES})
-
-ament_target_dependencies(${PROJECT_NAME})
+ament_target_dependencies(${PROJECT_NAME} Boost)
 ament_export_libraries(${PROJECT_NAME})
+ament_export_dependencies(Boost)
 ament_export_include_directories(include)
 
 install(
