@@ -20,6 +20,11 @@ ament_export_libraries(${PROJECT_NAME})
 ament_export_dependencies(Boost)
 ament_export_include_directories(include)
 
+# Causes the visibility macros to use dllexport rather than dllimport,
+# which is appropriate when building the dll but not consuming it.
+target_compile_definitions(${PROJECT_NAME}
+  PRIVATE "RANDOM_NUMBERS_BUILDING_LIBRARY")
+
 install(
 	TARGETS ${PROJECT_NAME}
 	ARCHIVE DESTINATION lib
