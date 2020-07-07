@@ -2,6 +2,13 @@
 Changelog for package random_numbers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.0.0 (2020-07-10)
+------------------
+* Fix ROS2 port (`#18 <https://github.com/ros-planning/random_numbers/issues/18>`_)
+* Update Travis for ROS2 (`#14 <https://github.com/ros-planning/random_numbers/issues/14>`_, `#16 <https://github.com/ros-planning/random_numbers/issues/16>`_)
+* Fix shared library install path (`#13 <https://github.com/ros-planning/random_numbers/issues/13>`_)
+* Contributors: Henning Kayser, Mike Lautman, Robert Haschke, Sean Yen
+
 0.3.2 (2018-02-27)
 ------------------
 * Update maintainership. (`#11 <https://github.com/ros-planning/random_numbers/issues/11>`_)
