@@ -42,7 +42,6 @@
 #include <boost/random/uniform_int.hpp>
 #include <boost/random/variate_generator.hpp>
 #include <boost/random/normal_distribution.hpp>
-#include <random_numbers/visibility_control.hpp>
 
 namespace random_numbers
 {
@@ -56,15 +55,12 @@ class RandomNumberGenerator
 {
 public:
   /** \brief Constructor. Always sets a "random" random seed */
-  RANDOM_NUMBERS_PUBLIC
   RandomNumberGenerator(void);
 
   /** \brief Constructor. Allow a seed to be specified for deterministic behaviour */
-  RANDOM_NUMBERS_PUBLIC
   RandomNumberGenerator(boost::uint32_t seed);
 
   /** \brief Generate a random real between 0 and 1 */
-  RANDOM_NUMBERS_PUBLIC
   double uniform01(void)
   {
     return uni_();
@@ -75,21 +71,18 @@ public:
    * @param lower_bound The lower bound
    * @param upper_bound The upper bound
    */
-  RANDOM_NUMBERS_PUBLIC
   double uniformReal(double lower_bound, double upper_bound)
   {
     return (upper_bound - lower_bound) * uni_() + lower_bound;
   }
 
   /** \brief Generate a random real using a normal distribution with mean 0 and variance 1 */
-  RANDOM_NUMBERS_PUBLIC
   double gaussian01(void)
   {
     return normal_();
   }
 
   /** \brief Generate a random real using a normal distribution with given mean and variance */
-  RANDOM_NUMBERS_PUBLIC
   double gaussian(double mean, double stddev)
   {
     return normal_() * stddev + mean;
@@ -98,7 +91,6 @@ public:
   /** \brief Uniform random unit quaternion sampling. The computed value has the order (x,y,z,w)
    * @param value[4] A four dimensional array in which the computed quaternion will be returned
    */
-  RANDOM_NUMBERS_PUBLIC
   void quaternion(double value[4]);
 
   /** \brief Generate an integer uniformly at random within a specified range (inclusive) */
@@ -112,7 +104,6 @@ public:
    * \brief Allow the randomly generated seed to be saved so that experiments / benchmarks can be recreated in the
    * future
    */
-  RANDOM_NUMBERS_PUBLIC
   boost::uint32_t getFirstSeed();
 
 private:
