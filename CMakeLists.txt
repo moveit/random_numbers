@@ -7,7 +7,7 @@ if(NOT CMAKE_CXX_STANDARD)
 endif()
 
 find_package(ament_cmake REQUIRED)
-find_package(Boost REQUIRED date_time math ramdom thread)
+find_package(Boost REQUIRED date_time random thread)
 
 include_directories(include)
 

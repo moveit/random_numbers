@@ -18,7 +18,6 @@
   <buildtool_depend>ament_cmake</buildtool_depend>
   <build_depend>libboost-dev</build_depend>
   <build_depend>libboost-date-time-dev</build_depend>
-  <build_depend>libboost-math-dev</build_depend>
   <build_depend>libboost-random-dev</build_depend>
   <build_depend>libboost-thread-dev</build_depend>
 
@@ -27,7 +26,6 @@
   <build_export_depend>libboost-thread-dev</build_export_depend>
 
   <exec_depend>libboost-date-time</exec_depend>
-  <exec_depend>libboost-math</exec_depend>
   <exec_depend>libboost-random</exec_depend>
   <exec_depend>libboost-thread</exec_depend>
   <export>
