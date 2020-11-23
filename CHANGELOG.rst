@@ -2,6 +2,11 @@
 Changelog for package random_numbers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.0.0 (2020-11-23)
+------------------
+* [maint] Run Travis on Foxy and check ament_lint
+* Contributors: Henning Kayser
+
 1.0.0 (2020-07-10)
 ------------------
 * Fix ROS2 port (`#18 <https://github.com/ros-planning/random_numbers/issues/18>`_)
