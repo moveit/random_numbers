@@ -21,13 +21,15 @@ ament_export_dependencies(Boost)
 ament_export_include_directories(include)
 
 install(
-	TARGETS ${PROJECT_NAME}
-	ARCHIVE DESTINATION lib
-	LIBRARY DESTINATION lib
-	RUNTIME DESTINATION bin
+  TARGETS ${PROJECT_NAME}
+  ARCHIVE DESTINATION lib
+  LIBRARY DESTINATION lib
+  RUNTIME DESTINATION bin
 )
 
-install(DIRECTORY include/
-        DESTINATION include)
+install(
+  DIRECTORY include/
+  DESTINATION include
+)
 
 ament_package()
