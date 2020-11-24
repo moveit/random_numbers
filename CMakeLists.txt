@@ -20,6 +20,8 @@ ament_export_libraries(${PROJECT_NAME})
 ament_export_dependencies(Boost)
 ament_export_include_directories(include)
 
+set_target_properties(${PROJECT_NAME} PROPERTIES WINDOWS_EXPORT_ALL_SYMBOLS TRUE)
+
 install(
   TARGETS ${PROJECT_NAME}
   ARCHIVE DESTINATION lib
