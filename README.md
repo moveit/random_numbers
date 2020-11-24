@@ -6,7 +6,7 @@ This library contains wrappers for generating floating point values, integers, q
 
 ## Build Status
 
-master branch: [![Build Status](https://travis-ci.org/ros-planning/random_numbers.png?branch=master)](https://travis-ci.org/ros-planning/random_numbers)
+ros2 branch: [![Build Status](https://travis-ci.com/ros-planning/random_numbers.svg?branch=ros2)](https://travis-ci.com/ros-planning/random_numbers)
 
 ## Features
 
