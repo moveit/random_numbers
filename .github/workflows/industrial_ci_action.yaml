@@ -9,7 +9,6 @@ on:
   push:
     branches:
       - master
-      - ros2
 
 jobs:
   industrial_ci:
@@ -53,6 +52,7 @@ jobs:
             ccache-${{ env.CACHE_PREFIX }}
       - name: industrial_ci
         uses: 'ros-industrial/industrial_ci@master'
+        env: ${{ matrix.env }}
       - name: upload test artifacts (on failure)
         uses: actions/upload-artifact@v2
         if: failure()
