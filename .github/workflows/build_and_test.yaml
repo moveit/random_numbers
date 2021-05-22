@@ -1,7 +1,7 @@
 # This config uses industrial_ci (https://github.com/ros-industrial/industrial_ci.git).
 # For troubleshooting, see readme (https://github.com/ros-industrial/industrial_ci/blob/master/README.rst)
 
-name: BuildAndTest
+name: Build and Test
 
 on:
   workflow_dispatch:
@@ -19,12 +19,20 @@ jobs:
             ROS_REPO: main
           - ROS_DISTRO: foxy
             ROS_REPO: testing
+          - ROS_DISTRO: galactic
+            ROS_REPO: main
+          - ROS_DISTRO: galactic
+            ROS_REPO: testing
+          - ROS_DISTRO: rolling
+            ROS_REPO: main
+          - ROS_DISTRO: rolling
+            ROS_REPO: testing
     env:
-      CCACHE_DIR: "${{ github.workspace }}/.ccache"
+      CCACHE_DIR: ${{ github.workspace }}/.ccache
       BASEDIR: ${{ github.workspace }}/.work
-      CACHE_PREFIX: "${{ matrix.env.ROS_DISTRO }}-${{ matrix.env.ROS_REPO }}"
+      CACHE_PREFIX: ${{ matrix.env.ROS_DISTRO }}-${{ matrix.env.ROS_REPO }}
 
-    name: "${{ matrix.env.ROS_DISTRO }}-${{ matrix.env.ROS_REPO }}"
+    name: ${{ matrix.env.ROS_DISTRO }}-${{ matrix.env.ROS_REPO }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
