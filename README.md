@@ -6,8 +6,11 @@ This library contains wrappers for generating floating point values, integers, q
 
 ## Build Status
 
-[![BuildAndTest](https://github.com/ros-planning/random_numbers/actions/workflows/industrial_ci_action.yaml/badge.svg?branch=ros2)](https://github.com/ros-planning/random_numbers/actions/workflows/industrial_ci_action.yaml?branch=ros2)
-[![Format](https://github.com/ros-planning/random_numbers/actions/workflows/format.yaml/badge.svg?branch=ros2)](https://github.com/ros-planning/random_numbers/actions/workflows/format.yaml?branch=ros2)
+| Branch | CI Status |
+| ------ | --------- |
+| `ros2` | [![Formatting (pre-commit)](https://github.com/ros-planning/random_numbers/actions/workflows/format.yaml/badge.svg?branch=ros2)](https://github.com/ros-planning/random_numbers/actions/workflows/format.yaml?query=branch%3Aros2) [![Build and Test](https://github.com/ros-planning/random_numbers/actions/workflows/build_and_test.yaml/badge.svg?branch=ros2)](https://github.com/ros-planning/random_numbers/actions/workflows/build_and_test.yaml?query=branch%3Aros2) |
+| `master (ROS1)` | [![Formatting (pre-commit)](https://github.com/ros-planning/random_numbers/actions/workflows/format.yaml/badge.svg?branch=master)](https://github.com/ros-planning/random_numbers/actions/workflows/format.yaml?query=branch%3Akinetic-devel) [![Build and Test](https://github.com/ros-planning/random_numbers/actions/workflows/industrial_ci_action.yaml/badge.svg?branch=master)](https://github.com/ros-planning/random_numbers/actions/workflows/build_and_test.yaml?query=branch%3Amaster) |
+
 
 ## Features
 
