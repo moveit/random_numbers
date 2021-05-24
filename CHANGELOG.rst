@@ -2,6 +2,17 @@
 Changelog for package random_numbers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.0.1 (2021-05-24)
+------------------
+* Support rolling on CI (`#32 <https://github.com/ros-planning/random_numbers/issues/32>`_)
+* Migrate to GitHub Actions (`#30 <https://github.com/ros-planning/random_numbers/issues/30>`_)
+* Fix Travis README badge (`#26 <https://github.com/ros-planning/random_numbers/issues/26>`_)
+* Enable WINDOWS_EXPORT_ALL_SYMBOLS property for MSVC support (`#23 <https://github.com/ros-planning/random_numbers/issues/23>`_)
+* Declare specific boost depedencies (`#22 <https://github.com/ros-planning/random_numbers/issues/22>`_)
+  * removed unnecessary libboost-math libraries as only headers-only parts are used
+* Fix clang-format, ament_lint_cmake (`#25 <https://github.com/ros-planning/random_numbers/issues/25>`_)
+* Contributors: Henning Kayser, Lior Lustgarten, Mikael Arguedas, Robert Haschke, Tyler Weaver, Vatan Aksoy Tezer
+
 2.0.0 (2020-11-23)
 ------------------
 * [maint] Run Travis on Foxy and check ament_lint
