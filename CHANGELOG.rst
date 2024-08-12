@@ -2,6 +2,13 @@
 Changelog for package random_numbers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.3.3 (2024-08-12)
+------------------
+* Windows shared library support (`#27 <https://github.com/ros-planning/random_numbers/issues/27>`_/`#23 <https://github.com/ros-planning/random_numbers/pull/23>`_)
+* Bump required cmake version (`#19 <https://github.com/ros-planning/random_numbers/issues/19>`_)
+* Fix shared library install path (`#13 <https://github.com/ros-planning/random_numbers/issues/13>`_)
+* Contributors: Michael Görner, Robert Haschke, Sean Yen [MSFT], Silvio Traversaro
+
 0.3.2 (2018-02-27)
 ------------------
 * Update maintainership. (`#11 <https://github.com/ros-planning/random_numbers/issues/11>`_)

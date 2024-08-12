@@ -1,6 +1,6 @@
 <package>
   <name>random_numbers</name>
-  <version>0.3.2</version>
+  <version>0.3.3</version>
   <description>
   This  library contains wrappers for generating floating point values, integers, quaternions using boost libraries.
 
