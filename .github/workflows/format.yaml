@@ -11,6 +11,6 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
     - uses: actions/checkout@v4
-    - name: Install clang-format-10
-      run: sudo apt-get install clang-format-10
+    - name: Install clang-format-14
+      run: sudo apt-get install clang-format-14
     - uses: pre-commit/action@v3.0.1
