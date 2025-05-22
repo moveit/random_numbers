@@ -14,7 +14,7 @@ include_directories(include)
 add_library(${PROJECT_NAME} SHARED
   src/random_numbers.cpp
 )
-target_link_libraries(${PROJECT_NAME} Boost)
+target_link_libraries(${PROJECT_NAME} Boost::random)
 ament_export_targets(export_${PROJECT_NAME})
 ament_export_libraries(${PROJECT_NAME})
 ament_export_dependencies(Boost)
