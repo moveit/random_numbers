@@ -14,8 +14,8 @@ include_directories(include)
 add_library(${PROJECT_NAME} SHARED
   src/random_numbers.cpp
 )
-
-ament_target_dependencies(${PROJECT_NAME} Boost)
+target_link_libraries(${PROJECT_NAME} Boost::random)
+ament_export_targets(export_${PROJECT_NAME})
 ament_export_libraries(${PROJECT_NAME})
 ament_export_dependencies(Boost)
 ament_export_include_directories(include)
@@ -24,6 +24,7 @@ set_target_properties(${PROJECT_NAME} PROPERTIES WINDOWS_EXPORT_ALL_SYMBOLS TRUE
 
 install(
   TARGETS ${PROJECT_NAME}
+  EXPORT export_${PROJECT_NAME}
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib
   RUNTIME DESTINATION bin
