@@ -2,6 +2,12 @@
 Changelog for package random_numbers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.0.2 (2025-05-28)
+------------------
+* Modernize cmake (`#50 <https://github.com/ros-planning/random_numbers/issues/50>`_)
+* Replace deprecated ament_target_libraries with target_link_libraries (`#47 <https://github.com/ros-planning/random_numbers/issues/47>`_)
+* Contributors: David V. Lu, mosfet80
+
 2.0.1 (2021-05-24)
 ------------------
 * Support rolling on CI (`#32 <https://github.com/ros-planning/random_numbers/issues/32>`_)
