@@ -2,6 +2,11 @@
 Changelog for package random_numbers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.0.3 (2025-06-01)
+------------------
+* Fix declaration of include directories
+* Contributors: Robert Haschke
+
 2.0.2 (2025-05-28)
 ------------------
 * Modernize cmake (`#50 <https://github.com/ros-planning/random_numbers/issues/50>`_)
