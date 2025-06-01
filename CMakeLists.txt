@@ -4,12 +4,14 @@ project(random_numbers)
 find_package(ament_cmake REQUIRED)
 find_package(Boost REQUIRED date_time random thread)
 
-include_directories(include)
-
 add_library(${PROJECT_NAME} SHARED
   src/random_numbers.cpp
 )
-target_link_libraries(${PROJECT_NAME} Boost::random)
+target_include_directories(${PROJECT_NAME} PUBLIC
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+    $<INSTALL_INTERFACE:include/${PROJECT_NAME}>
+)
+target_link_libraries(${PROJECT_NAME} PUBLIC Boost::random)
 ament_export_targets(export_${PROJECT_NAME})
 ament_export_libraries(${PROJECT_NAME})
 ament_export_dependencies(Boost)
@@ -25,10 +27,7 @@ install(
   RUNTIME DESTINATION bin
 )
 
-install(
-  DIRECTORY include/
-  DESTINATION include
-)
+install(DIRECTORY include/ DESTINATION include/${PROJECT_NAME})
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
