@@ -2,6 +2,11 @@
 Changelog for package random_numbers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.0.4 (2025-06-06)
+------------------
+* Fix propagation of Boost::random dependency
+* Contributors: Robert Haschke
+
 2.0.3 (2025-06-01)
 ------------------
 * Fix declaration of include directories
