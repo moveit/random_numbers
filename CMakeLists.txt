@@ -12,6 +12,7 @@ target_include_directories(${PROJECT_NAME} PUBLIC
     $<INSTALL_INTERFACE:include/${PROJECT_NAME}>
 )
 target_link_libraries(${PROJECT_NAME} PUBLIC Boost::random)
+target_link_libraries(${PROJECT_NAME} PRIVATE Boost::thread)
 ament_export_targets(export_${PROJECT_NAME} HAS_LIBRARY_TARGET)
 
 set_target_properties(${PROJECT_NAME} PROPERTIES WINDOWS_EXPORT_ALL_SYMBOLS TRUE)
