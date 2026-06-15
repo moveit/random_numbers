@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.20)
 project(random_numbers)
 
 find_package(ament_cmake REQUIRED)
-find_package(Boost REQUIRED date_time random thread)
+find_package(Boost CONFIG REQUIRED date_time random thread)
 
 add_library(${PROJECT_NAME} SHARED
   src/random_numbers.cpp
