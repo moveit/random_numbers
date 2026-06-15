@@ -2,6 +2,12 @@
 Changelog for package random_numbers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.0.5 (2026-06-15)
+------------------
+* Switch to find_package(Boost CONFIG)
+* Fix link to Boost::thread imported target (`#52 <https://github.com/moveit/random_numbers/issues/52>`_)
+* Contributors: Robert Haschke, Silvio Traversaro
+
 2.0.4 (2025-06-06)
 ------------------
 * Fix propagation of Boost::random dependency
