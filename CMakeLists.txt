@@ -8,7 +8,7 @@ catkin_package(
   INCLUDE_DIRS include
   )
 
-find_package(Boost REQUIRED date_time system thread)
+find_package(Boost REQUIRED date_time thread)
 include_directories(${Boost_INCLUDE_DIR})
 
 include_directories(include)
